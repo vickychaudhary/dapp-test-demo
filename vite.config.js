@@ -33,7 +33,7 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     server: {
-      open: true, // Automatically open the browser
+      open: false, // Automatically open the browser
       proxy: {},
       hmr: {
         overlay: false, // Disable HMR overlay (not recommended for production)
