@@ -12,10 +12,6 @@ const AlreadyConvincedSection = () => {
       sx={{
         py: 7,
         textAlign: 'center',
-        bgcolor: 'neutral.main',
-        borderTop: 1,
-        borderBottom: 1,
-        borderColor: 'grey.100',
       }}
     >
       <Container>

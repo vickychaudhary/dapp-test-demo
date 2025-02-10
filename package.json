@@ -46,6 +46,7 @@
     "request": "^2.88.2",
     "snore-log": "2.1.2",
     "sqlite3": "^5.1.6",
+    "swiper": "^11.2.2",
     "web-vitals": "^1.0.1",
     "web3": "1.0.0-beta.55",
     "yarn": "^1.22.17"

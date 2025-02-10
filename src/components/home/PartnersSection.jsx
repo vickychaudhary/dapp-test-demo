@@ -1,5 +1,8 @@
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import { Container } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import certik from 'assets/images/partners/certik.svg';
 import binancechain from 'assets/images/partners/binancechain.svg';
 import coinmarketcap from 'assets/images/partners/coinmarketcap.svg';
@@ -10,14 +13,28 @@ const partners = [
   { label: 'coinmarketcap', src: coinmarketcap },
   { label: 'certik', src: certik },
   { label: 'fairyproof', src: fairyproof, width: 150 },
+  { label: 'binancechain', src: binancechain },
+  { label: 'coinmarketcap', src: coinmarketcap },
+  { label: 'certik', src: certik },
+  { label: 'fairyproof', src: fairyproof, width: 150 },
 ];
 
 const PartnersSection = () => {
   return (
-    <Container sx={{ pb: 5, mb: 5 }} className="fadeInUp">
-      <Grid container rowSpacing={4} columnSpacing={2} alignItems="center" justifyContent="center">
+    <Container sx={{ py: 5 }} className="fadeInUp">
+      <Swiper
+        slidesPerView={2}
+        spaceBetween={20}
+        breakpoints={{
+          640: { slidesPerView: 3 },
+          960: { slidesPerView: 4 },
+        }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
+        modules={[Autoplay]}
+      >
         {partners.map((partner, i) => (
-          <Grid item xs={6} sm={4} md={2} key={i} sx={{ textAlign: 'center' }}>
+          <SwiperSlide key={i} style={{ textAlign: 'center' }}>
             <a
               href={partner.href}
               target="_blank"
@@ -26,9 +43,9 @@ const PartnersSection = () => {
             >
               <img src={partner.src} alt={partner.label} width={partner.width || 160} />
             </a>
-          </Grid>
+          </SwiperSlide>
         ))}
-      </Grid>
+      </Swiper>
     </Container>
   );
 };

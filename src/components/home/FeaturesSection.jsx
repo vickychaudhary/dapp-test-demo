@@ -22,7 +22,7 @@ const FeaturesSection = () => {
   return (
     <Box sx={{ bgcolor: 'neutral.main', py: 7, borderTop: 1, borderColor: 'grey.100' }}>
       <Container>
-        <Box sx={{ maxWidth: '500px' }}>
+        <Box sx={{ textAlign: 'center', py: 2 }}>
           <Typography variant="body1" color="primary.main" sx={{ mb: 1, fontWeight: 700 }}>
             Our main features
           </Typography>
