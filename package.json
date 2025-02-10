@@ -52,16 +52,11 @@
     "yarn": "^1.22.17"
   },
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "test": "your-test-script-here",
-    "deploy": "node Truffle/scripts/deployContract.js",
-    "devchain": "node Truffle/scripts/devChain.js",
-    "watch:events": "moralis-admin-cli add-contract",
-    "connect": "moralis-admin-cli connect-local-devchain",
-    "prepare": ""
-  },
+  "start": "vite",
+  "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build",
+  "serve": "vite preview",
+  "test": "your-test-script-here"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
